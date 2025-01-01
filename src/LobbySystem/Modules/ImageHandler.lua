@@ -6,7 +6,7 @@ function ImageHandler.New(Player : Player,Parent : Frame,DestroyImage : BoolValu
 	local self = setmetatable({},{__index = ImageHandler})
 	self.Destroy = DestroyImage
 	self.Player = Player
-	self.UserId = Player.UserId
+	self.UserId = Player.UserId or 1
 	self.Image = self:GetImage()
 	self.ImageParent = Parent
 	self.ImageClone = PlayerImage:Clone()
